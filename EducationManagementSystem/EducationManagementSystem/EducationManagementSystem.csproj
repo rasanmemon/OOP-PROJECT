@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3168B9D1-4044-4E97-95CD-BED2E8931FFF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EducationManagementSystem</RootNamespace>
+    <AssemblyName>EducationManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VisualReactiveWinForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ee513efc52b401d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Visual.Reactive.WinForms.1.0.0\lib\VisualReactiveWinForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Panel.Designer.cs">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CF_Admin.Designer.cs">
+      <DependentUpon>CF_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_StudentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CF_StudentPanel.Designer.cs">
+      <DependentUpon>CF_StudentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_TeacherPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CF_TeacherPanel.Designer.cs">
+      <DependentUpon>CF_TeacherPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\CourseController.cs" />
+    <Compile Include="Controller\CourseFeedbackController.cs" />
+    <Compile Include="Controller\MarksController.cs" />
+    <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\S_AttendanceController.cs" />
+    <Compile Include="Controller\TeacherController.cs" />
+    <Compile Include="Controller\T_AttendanceController.cs" />
+    <Compile Include="Dashboard_AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard_AdminPanel.Designer.cs">
+      <DependentUpon>Dashboard_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_StudentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard_StudentPanel.Designer.cs">
+      <DependentUpon>Dashboard_StudentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_TeacherPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard_TeacherPanel.Designer.cs">
+      <DependentUpon>Dashboard_TeacherPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marks_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Marks_Admin.Designer.cs">
+      <DependentUpon>Marks_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marks_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Marks_Student.Designer.cs">
+      <DependentUpon>Marks_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marks_Teacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Marks_Teacher.Designer.cs">
+      <DependentUpon>Marks_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CourseFeedbackModel.cs" />
+    <Compile Include="Model\CourseModel.cs" />
+    <Compile Include="Model\MarksModel.cs" />
+    <Compile Include="Model\StudentModel.cs" />
+    <Compile Include="Model\S_AttendanceModel.cs" />
+    <Compile Include="Model\TeacherModel.cs" />
+    <Compile Include="Model\T_AttendanceModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SARegister_Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SARegister_Teacher.Designer.cs">
+      <DependentUpon>SARegister_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SA_AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SA_AdminPanel.Designer.cs">
+      <DependentUpon>SA_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SA_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SA_Student.Designer.cs">
+      <DependentUpon>SA_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SA_TeacherPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SA_TeacherPanel.Designer.cs">
+      <DependentUpon>SA_TeacherPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SRegister.Designer.cs">
+      <DependentUpon>SRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SR_AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SR_AdminPanel.Designer.cs">
+      <DependentUpon>SR_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SR_Teacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SR_Teacher.Designer.cs">
+      <DependentUpon>SR_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPanel.Designer.cs">
+      <DependentUpon>StudentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TARegister_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TARegister_Admin.Designer.cs">
+      <DependentUpon>TARegister_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TA_AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TA_AdminPanel.Designer.cs">
+      <DependentUpon>TA_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TA_Teacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TA_Teacher.Designer.cs">
+      <DependentUpon>TA_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherPanel.Designer.cs">
+      <DependentUpon>TeacherPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRegister.Designer.cs">
+      <DependentUpon>TRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TR_AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TR_AdminPanel.Designer.cs">
+      <DependentUpon>TR_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CourseFeedbackView.cs" />
+    <Compile Include="View\CourseView.cs" />
+    <Compile Include="View\MarksView.cs" />
+    <Compile Include="View\StudentView.cs" />
+    <Compile Include="View\S_AttendanceView.cs" />
+    <Compile Include="View\TeacherView.cs" />
+    <Compile Include="View\T_AttendanceView.cs" />
+    <EmbeddedResource Include="Admin_Panel.resx">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_Admin.resx">
+      <DependentUpon>CF_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_StudentPanel.resx">
+      <DependentUpon>CF_StudentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_TeacherPanel.resx">
+      <DependentUpon>CF_TeacherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_AdminPanel.resx">
+      <DependentUpon>Dashboard_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_StudentPanel.resx">
+      <DependentUpon>Dashboard_StudentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_TeacherPanel.resx">
+      <DependentUpon>Dashboard_TeacherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marks_Admin.resx">
+      <DependentUpon>Marks_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marks_Student.resx">
+      <DependentUpon>Marks_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marks_Teacher.resx">
+      <DependentUpon>Marks_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SARegister_Teacher.resx">
+      <DependentUpon>SARegister_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SA_AdminPanel.resx">
+      <DependentUpon>SA_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SA_Student.resx">
+      <DependentUpon>SA_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SA_TeacherPanel.resx">
+      <DependentUpon>SA_TeacherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SRegister.resx">
+      <DependentUpon>SRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SR_AdminPanel.resx">
+      <DependentUpon>SR_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SR_Teacher.resx">
+      <DependentUpon>SR_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPanel.resx">
+      <DependentUpon>StudentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TARegister_Admin.resx">
+      <DependentUpon>TARegister_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TA_AdminPanel.resx">
+      <DependentUpon>TA_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TA_Teacher.resx">
+      <DependentUpon>TA_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherPanel.resx">
+      <DependentUpon>TeacherPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRegister.resx">
+      <DependentUpon>TRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TR_AdminPanel.resx">
+      <DependentUpon>TR_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\attendance_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\feedback_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\logout_rounded_down_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\news_feed_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\student_registration_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\teacher_hiring_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\menu_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\report_card_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\front_desk_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo\Academic Records Logo 04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="button\Login_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo\Academic Records Logo 01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\search_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="button\Register_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="button\Register_New_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="button\Delete_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="button\Edit_Button.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
